@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fef9f4;
+    color: #3c3c3c;
+    line-height: 1.6;
+    padding-top: 70px; /* para que no tape la navbar */
+  }
+  
+  /*--------------------------- NAV ------------------------------*/
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffffee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 1000;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    color: #d6a4a4;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navbar .nav-links a {
+    text-decoration: none;
+    color: #3c3c3c;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #d6a4a4;
+  }
+  
+  /*-------------------------TITULO----------------------------------*/
+
+  .titulo {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #fff8f3, #fef9f4);
+  }
+  
+  .titulo h1 {
+    font-size: 2.8rem;
+    color: #a46a6a;
+    font-family: 'Georgia', serif;
+    margin-bottom: 1rem;
+  }
+  
+  .titulo p {
+    font-size: 1.2rem;
+    color: #5c5c5c;
+  }
+  
+  /* ---------------------------SECCIONES---------------------------*/
+
+  section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  section h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #a46a6a;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /*-------------------------LIBROS------------------------------------*/
+
+  .libros-grid {
+    display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  }
+  
+  .libro {
+    max-width: 200px;
+    flex: 1 1 180px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .libro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  }
+  
+  .libro img {
+    width: 100%;
+    height: 230px;
+    object-fit:cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  
+  .libro h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #3c3c3c;
+  }
+  
+  .libro p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+
+  .btn-link {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #a2c7c0;
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-link:hover {
+    background-color: #7ca7a1;
+  }
+
+  
+  
+  /* ------------------- FILTRO -------------------- */
+
+  .recomendaciones label,
+  .recomendaciones select {
+    display: block;
+    margin: 0 auto 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .recomendaciones select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-family: inherit;
+  }
+
+
+  /* -------------------- BOTON FLOTANTE -------------------------- */
+
+  .boton-flotante {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #d6a4a4;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-flotante:hover {
+    background-color: #a46a6a;
+  }
+
+  /* -------------------  FORMULARIO ---------------------*/
+
+  form.form-libro {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+  }
+  
+  form input,
+  form select,
+  form button {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+  
+  form button {
+    background-color: #d6a4a4;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #a46a6a;
+  }
+
+  .error-mensaje {
+    background-color: #ffe6e6;
+    color: #cc0000;
+    border: 1px solid #ffb3b3;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    max-width: 500px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+
+  /* --------------------- TABLA ----------------------*/
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+  
+  table th,
+  table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  
+  table img {
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 0;
+    height: 130px;
+    width: 80px;
+    object-fit: cover;
+  }
+
+  table .libro {
+    
+    padding: 0;
+    
+  }
+
+  .btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+  }
+
+  .btn-eliminar img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #ffe6e6;
+    transform: scale(1.05);
+  }
+  
+  .btn-eliminar:hover img {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(94%) saturate(5388%) hue-rotate(348deg) brightness(92%) contrast(101%);
+  }
+
+  /* ----------------- MEDIAS QUERIES ----------------------- */
+  
+  
+  @media screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    form.form-libro {
+      padding: 0 1rem;
+    }
+  
+    form input,
+    form select,
+    form button {
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    /* Tabla responsive */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    display: block;
+  }
+  
+  
+  table th,
+  table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    white-space: nowrap; /* que no se corte el texto */
+  }
+  
+  table img {
+    max-height: 100px;
+    max-width: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  }
+  
+  
+  
+  

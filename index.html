@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Libros & Café</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script defer src="js/index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+ 
+  <nav class="navbar">
+    <div class="logo">Libros & Café</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="admin.html">Administrador</a></li>
+    </ul>
+  </nav>
+
+  
+  <header class="titulo">
+    <h1>10 libros que hay que leer sí o sí</h1>
+    <p>Una selección de historias que te van a marcar para siempre.</p>
+  </header>
+
+
+  
+  <section class="libros-fijos">
+    <h2>Selección de clásicos y favoritos</h2>
+    <div class="libros-grid" id="librosFijos">
+      <!-- libros -->
+    </div>
+  </section>
+
+  <!-- libros recomendaciones -->
+  <section class="recomendaciones">
+    <h2>Recomendaciones de usuarios</h2>
+    <label for="filtroGenero">Filtrar por género:</label>
+    <select id="filtroGenero">
+      <option value="todos">Todos</option>
+      <option value="Fantasía">Fantasía</option>
+      <option value="Romance">Romance</option>
+      <option value="Ciencia Ficción">Ciencia Ficción</option>
+      <option value="Terror">Terror</option>
+      <option value="Misterio">Misterio</option>
+      <option value="No Ficción">No Ficción</option>
+    </select>
+    <div class="libros-grid" id="recomendaciones"></div>
+  </section>
+
+  <!-- boton gr -->
+  <a href="https://www.goodreads.com/" class="boton-flotante" target="_blank">
+    <i class="fas fa-book"></i>
+  </a>
+</body>
+</html>
