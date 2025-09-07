@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Libros & Café</title>
   <link rel="stylesheet" href="/styles/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script defer src="js/admin.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -30,7 +31,7 @@
       <input type="text" id="autor" placeholder="Autor" required />
       <input type="number" id="anio" placeholder="Año" required min="0"/>
       
-      <input type="file" id="imagen" accept="image/*" required />
+      <input type="url" id="imagen" placeholder="URL de la imagen" required />
       
       <select id="genero" required>
         <option value="">Seleccione un género</option>
