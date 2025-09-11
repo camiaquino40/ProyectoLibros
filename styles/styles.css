@@ -293,6 +293,40 @@
     filter: brightness(0) saturate(100%) invert(20%) sepia(94%) saturate(5388%) hue-rotate(348deg) brightness(92%) contrast(101%);
   }
 
+  .btn-editar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-editar img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .btn-editar:hover {
+    background-color: #e6f0ff; /* azul clarito */
+    transform: scale(1.05);
+  }
+  
+  .btn-editar:hover img {
+    filter: brightness(0) saturate(100%) invert(28%) sepia(86%) saturate(2363%) hue-rotate(203deg) brightness(93%) contrast(97%);
+    /* esto le da un tono azul al ícono en hover */
+  }
+
+  .swal2-select {
+    width: 62% !important;
+    padding: 0.75em;
+    border: 1px solid #d9d9d9;
+    border-radius: 0.25em;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+  }
+
   /* ----------------- MEDIAS QUERIES ----------------------- */
   
   

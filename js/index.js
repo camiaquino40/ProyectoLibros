@@ -5,7 +5,7 @@ const contenedorFijos = document.getElementById("librosFijos");
 const contenedorRecomendaciones = document.getElementById("recomendaciones");
 const filtroGenero = document.getElementById("filtroGenero");
 
-// Obtener libros fijos
+// obtener libros fijos
 async function obtenerLibrosFijos() {
   try {
     const respuesta = await api.get('/librosFijos');
@@ -16,7 +16,7 @@ async function obtenerLibrosFijos() {
   }
 }
 
-// Obtener recomendaciones
+// obtener recomendaciones
 async function obtenerRecomendaciones() {
   try {
     const respuesta = await api.get('/librosAdmin');
@@ -27,7 +27,7 @@ async function obtenerRecomendaciones() {
   }
 }
 
-// Renderizar libros fijos
+// renderizar libros fijos
 function renderizarLibrosFijos(libros) {
   contenedorFijos.innerHTML = '';
   libros.forEach(libro => {
@@ -43,7 +43,7 @@ function renderizarLibrosFijos(libros) {
   });
 }
 
-// Renderizar recomendaciones
+// renderizar recomendaciones
 function renderizarRecomendaciones(libros) {
   contenedorRecomendaciones.innerHTML = '';
 
@@ -65,7 +65,7 @@ function renderizarRecomendaciones(libros) {
   });
 }
 
-// Refrescar recomendaciones con filtro
+// refrescar recomendaciones con filtro
 async function refrescarRecomendaciones() {
   let libros = await obtenerRecomendaciones();
   const generoSeleccionado = filtroGenero.value;
@@ -77,12 +77,12 @@ async function refrescarRecomendaciones() {
   renderizarRecomendaciones(libros);
 }
 
-// Inicializar página
+// inicializar pagina
 window.addEventListener("DOMContentLoaded", async () => {
   const fijos = await obtenerLibrosFijos();
   renderizarLibrosFijos(fijos);
   refrescarRecomendaciones();
 });
 
-// Escuchar filtro
+// escuchar filtro
 filtroGenero.addEventListener('change', refrescarRecomendaciones);
